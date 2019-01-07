@@ -18,51 +18,51 @@ Note that Ubuntu server will also work.
 
 #### [Why use a SIEM](#why-a-siem)
 Using a SIEM has multiple advantages
-
-     * All data can be visualized effectively.
-     * Analysts and System- and Security engineers have an overview of the threats and weaknesses of their systems.
-     * A Siem can monitor logs, process them and alert the operators of the SIEM when necessary.
- 
+```
+All data can be visualized effectively.
+Analysts and System- and Security engineers have an overview of the threats and weaknesses of their systems.
+A Siem can monitor logs, process them and alert the operators of the SIEM when necessary.
+``` 
 
 #### [Setting up the ELK stack](#setting-up-elk)
 ##### [Install Java](#install-java)
 First you need to set up java. 
-
-    ### first update the package repository. 
-    sudo apt update
+```
+### first update the package repository. 
+sudo apt update
     
-    ### Java 10 is not supported, so a lower version will be used. 
-    sudo apt install openjdk-8-jdk
+### Java 10 is not supported, so a lower version will be used. 
+sudo apt install openjdk-8-jdk
     
-    #### now check whether java is correctly installed.
-    java -version
-
+#### now check whether java is correctly installed.
+java -version
+```
 ##### [Install Kibana](#install-kibana)
 Login to you server where you want to setup kibana
 
-    
-    # Download the deb package for ubuntu
-    sudo wget https://artifacts.elastic.co/downloads/kibana/kibana-6.4.0-amd64.deb
-    sudo dpkg -i kibana-6.4.0-amd64.deb
-
+```    
+# Download the deb package for ubuntu
+sudo wget https://artifacts.elastic.co/downloads/kibana/kibana-6.4.0-amd64.deb
+sudo dpkg -i kibana-6.4.0-amd64.deb
+```
     
 Now open /etc/kibana/kibana.yml. In the Kibana configuration file, find the line that specifies server.host, and replace the IP address ("0.0.0.0" by default) with "localhost":
     
-    
+```    
     server.host: "localhost"
     # IP of the Elasticsearch server
     elasticsearch.url: "http://localhost:9200"
-
+```
 
 Restart the kibana service.
-	
+```
     sudo systemctl restart kibana
-
+```
 Then enable the service to start at boottime
-    
+```    
     sudo systemctl daemon-reload
     sudo systemctl enable kibana    
-    
+```    
 
 
 ##### [Install Elasticsearch](#install-elasticsearch)
