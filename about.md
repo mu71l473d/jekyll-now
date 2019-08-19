@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am an IT Service managmement student and interested in security with an emphasis on penetration testing. 
+A junior Ethical Hacker/Pentester working on the OSCP. This is my personal blog and the thoughts and opinions are my own, and not my employer's.
 
 ### Contact me
 
