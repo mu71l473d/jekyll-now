@@ -3,31 +3,38 @@ layout: post
 title: Kiwa Workshop
 ---
 
-Het is nu tijd om te starten. Maar allereerst nog even:
+It is now time to start. But first of all:
 
-#### [Regels Kiwa Workshop](#regels)
-- Je hebt tot 14:45 om de challenges op te lossen. Daarna zal ik nog even wat dingen vertellen.
-- Je mag geen DoS/DDoS uitvoeren op de Kiwa Workshop
-- Je mag niet instanties van andere teams bekijken, bewerken, aanvallen o.i.d. Ook andere manieren om teams lastig te vallen is niet toegestaan.
-- De broncode van bkimminich en mu71l473d zijn tijdens de challenge off-limits, ook het zoeken naar antwoorden is niet toegestaan.
-- Het gebruik van een vulnerability scanner is niet de bedoeling. Het is de bedoeling dat je zelf op zoek gaat.
-- Je mag niet de database aanpassen zodat je alle challenges hebt opgelost.
-- Vragen staat vrij! De spelleider probeert niet te veel weg te geven.
-- Het is verder wel toegestaan om je teamlid of de spelleider te vragen naar het antwoord.
-- Ook mag je algemene informatie zoeken over security tests en hackmethodes.
-- Have fun!
+#### [Rules Kiwa Workshop] (# rules)
+- You have until 14:45 to solve the challenges. Then I will take over and do some closing words
+- You are not allowed to do DoS / DDoS the Kiwa Workshop
+- You are not allowed to view, edit or attack instances of other teams. Other ways of harassing other teams are also not permitted.
+- The source code of bkimminich and mu71l473d are off limits during the challenge, and the search for answers is also not allowed.
+- The use of a vulnerability scanner is not intended use. You are supposed to search for vulnerabilities yourself.
+- You may not modify the database so that you have solved all challenges.
+- Feel free to ask questions! The game leader (Rene Bisperink) does try to not give away too much.
+- It is also allowed to ask your team member or the game leader for hints or help.
+- You can search for general information about security tests and hacking methods, just searching for specific answers for the challenges or browsing the source code is off-limits.
+- Last but not least: Have fun!
+
+#### [Other notes] (#notes)
+- the Kiwa workshop is supposed to be the opposite of a best practice or template application for web developers: It is an awareness, traning, demonstration and exercise tool for security risks in modern web apps.
+- Challenges up to three stars are all tested and confirmed working. However, if a challenge doesn't register correctly, it can be useful to go back to the main menu and back to the home page and then back to the exploited page for it to register correctly.
+- Even if the solutions for the workshop are found, Rene modified the challenges to not all be the answers as documented.
+- If teams get to the four stars challenges in 2.5 hours we will start to question the team composition or the finding of answers of the solution(s) ;) It is also possible that the team is just very good.
+- Rene's main expertise is hacking and penetration testing, not specifically for web, so it is possible that you as a developer know more than him about programming. Another option could be that he is just trying to hide solutions that would give away the challenges. 
+- Rene is open for later conversations about setting it up yourself or development/hacking/pentesting/interesting projects. The ways of reaching him are in the slides. They will be made available after the workshop.
+- Bjorn Kimminich deserves a lot of credit for setting up juice-shop, on which the kiwa workshop is based. 
+- Other credits go out to the people that helped Rene set up the workshop, including the configuration of containers on the dev environment which you will use for this workshop and just for setting up this workshop in collaboration with Rene
+
+#### [The goal of the workshop] (# goal)
+The kiwa workshop contains different challenges with different levels of difficulty, with the aim of uncovering the underlying security problems and exploiting them to solve challenges. These vulnerabilities have been intentionally planted in the application for exactly that purpose, but in a way that also corresponds to "real-life" web development and its vulnerabilities. The Webshop is based on the OWASP Web top 10 list.
+
+Progress is tracked by the application with the help of push notifications for successful exploits and a scoreboard for the progress overview. Finding this scoreboard is one of the (easiest) challenges. The idea behind this workshop is to use gamification techniques to motivate the teams to solve as many challenges as possible, learn new things from the hacker's perspective, and to compete against other teams. Because not everyone is a (web)-developer we try to spread the different expertises per teams.
 
 
 
-#### [Het doel van de workshop](#doel)
-De kiwa workshop bevat verschillende uitdagingen met verschillende moeilijkheidsgraden waarbij het doel is om de onderliggende beveiligingsproblemen te herkennen en er misbruik van te maken om challenges op te lossen. Deze kwetsbaarheden zijn opzettelijk in de applicatie geplant voor precies dat doel, maar op een manier die ook overeenkomt met "real-life" webontwikkeling. De Webshop is namelijk gebaseerd op de OWASP Web top 10 lijst.
-
-De voortgang wordt bijgehouden door de applicatie met behulp van pushmeldingen voor succesvolle exploits en een scorebord voor het voortgangsoverzicht. Het vinden van dit scorebord is een van de (gemakkelijkste) uitdagingen. Het idee achter deze workshop is om gamification-technieken te gebruiken om de teams te motiveren om zoveel mogelijk uitdagingen op te lossen, en het strijden tegen andere teams. 
-
-
-LET OP: HET VERVOLG GAAT DOOR IN HET ENGELS, EN IS EEN SAMENVATTING VAN PWNING-JUICE-SHOP
-
-
+THE TEXT BELOW IS A SUMMARY OF THE GITBOOK by bkimminich about the juice-shop -> Kiwa workshop.
 ### Architecture overview
 
 The Kiwa Workshop is a pure web application implemented in JavaScript
@@ -214,12 +221,6 @@ even the Kali development team states:
 Although there exist some more light-weight pentesting distributions,
 they basically still present a high hurdle for people new to the IT
 security field. If you still feel up to it, give Kali Linux a try!
-
-
-Warning: Do this outside of the workshop.
-Another option is [CommandoVM](https://github.com/fireeye/commando-vm).
-This is an installer to install penetration test tools in a windows environment.
-Make sure you do this on a clean install, where you have admin rights.
 
 ### Internet
 
