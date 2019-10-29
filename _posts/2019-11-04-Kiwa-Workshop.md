@@ -329,9 +329,9 @@ OWASP and CWE (without claiming to be complete).
 | XML External Entities (XXE) | [A4:2017](https://www.owasp.org/index.php/Top_10-2017_A4-XML_External_Entities_%28XXE%29)                                                                                                                                     | [CWE-611](https://cwe.mitre.org/data/definitions/611.html)                                                                                                                                                                                     |
 
 
-# Challenge tracking
+### Challenge tracking
 
-## The Score Board
+#### The Score Board
 
 In order to motivate you to hunt for vulnerabilities, it makes sense to
 give you at least an idea what challenges are available in the
@@ -367,7 +367,7 @@ allows for a bit of competition between the participants.
 If not deliberately turned off you can hover over each _unsolved_ label to see a hint for that
 challenge. 
 
-### Challenge Filters
+#### Challenge Filters
 
 Additional to the filtering by difficulty, you can filter the Score
 Board by challenge categories, e.g. to focus your
@@ -377,7 +377,7 @@ solved challenges to reduce the level of distraction on the Score Board.
 🐌 Selecting _Show all_ for all difficulties and all challenges might
 impact the load time of the Score Board significantly!
 
-## Success notifications
+#### Success notifications
 
 The Kiwa Workshop employs a simple yet powerful gamification
 mechanism: Instant success feedback! Whenever you solve a hacking
@@ -385,8 +385,8 @@ challenge, a notification is _immediately_ shown on the user interface.
 
 This feature makes it unnecessary to switch back and forth between the
 screen you are attacking and the score board to verify if you succeeded.
-Some challenges will force you to perform an attack outside of the Juice
-Shop web interface, e.g. by interacting with the REST API directly. In
+Some challenges will force you to perform an attack outside of the Workshop
+web interface, e.g. by interacting with the REST API directly. In
 these cases the success notification will light up when you come back to
 the regular web UI the next time.
 
@@ -396,7 +396,7 @@ case a number of notifications "piled up" it is not necessary to dismiss
 each one individually, as you can simply `Shift`-click one of their
 _X_-buttons to dismiss all at the same time.
 
-## Automatic saving and restoring hacking progress
+#### Automatic saving and restoring hacking progress
 To keep the resilience against data corruption but allow users to _pick
 up where they left off_ after a server restart, your hacking progress is
 automatically saved whenever you solve a challenge - as long as you
@@ -415,7 +415,7 @@ If you want to start over with a fresh hacking session, simply click the
 _Delete cookie to clear hacking progress_ button. After the next server
 restart, your score board will be blank.
 
-## Potentially dangerous challenges
+#### Potentially dangerous challenges
 
 Some challenges can cause potential harm or pose some danger for your
 computer, i.e. the XXE, SSTi and Deserialization challenges as well as
