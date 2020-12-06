@@ -12,7 +12,7 @@ As part of a fun sunday evening project, I created a custom android boot screen.
 
 ## [Creating a custom android boot animation](#custom-boot-animation)
 
-## [warning](#warning)
+** WARNING **
 Before starting the custom animation, it is a good idea to back-up your existing boot animation. For this you need adb and the developer options enabled.
 ~~~
 #start an adb root shell. only the root user can access the /system partition
@@ -90,8 +90,18 @@ For my simple animation, the folder part0 was sufficient, although you can assig
 
 A helpful conversion and creation tool can be found [here](https://github.com/iamantony/create_android_bootanimation). it allows you to convert gifs or images to a bootanimation.zip file. 
  
-## loading and playing frames
+## [loading and playing frames](#loading-and-playing)
 
 Each part folder is scanned and loaded directly from the zip archive. Within a part directory, every file ( is expected to be a PNG file that represents one frame in that part (at the specified resolution). For this reason it is important that frames be named sequentially (e.g. part000.png, part001.png, ...) and added to the zip archive in that order.
 
-[source](https://android.googlesource.com/platform/frameworks/base/+/master/cmds/bootanimation/FORMAT.md)
+## [Uploading the new bootanimation](#uploading-animation)
+~~~
+#start an adb root shell. only the root user can access the /system partition
+adb root
+#remount the partions with the permissions of the root user
+adb remount
+#push the file to the phone
+adb push bootanimation.zip /system/media/bootanimation.zip
+~~~
+
+[Source reference for the specific parameters](https://android.googlesource.com/platform/frameworks/base/+/master/cmds/bootanimation/FORMAT.md)
