@@ -6,7 +6,6 @@ title: eMAPT review and some tips
 This post is meant to be somewhat of a MASPT review including some other thoughts.
 
 A discussion I had recently with a LinkedIn connection reminded me to write this review of the Mobile Application Security Pentetration Tester, leading to the eMAPTv1 certification. While it did not turn out as a review per say, I hope you still get some useful tidbits of information out of it. 
-
 Please note that this was the MASPTv2 course with the eMAPTv1 certification. I have not checked whether they updated the course for the INE platform.
 
 ## [The course](#course)
