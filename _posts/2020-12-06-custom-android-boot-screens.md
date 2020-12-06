@@ -4,18 +4,15 @@ title: Custom android boot screens.
 ---
 
 As part of a fun sunday evening project, I created a custom android boot screen. These animations are stored in a bootanimation.zip file. Android selects a boot animation zipfile from the following locations, in order:
-'''
 
 	/system/media/bootanimation-encrypted.zip (if getprop("vold.decrypt") = '1')
 	/system/media/bootanimation.zip
 	/oem/media/bootanimation.zip
-'''
+
 ## [Creating a custom android boot animation](#custom-boot-animation)
 
 ## [warning](#warning)
 Before starting the custom animation, it is a good idea to back-up your existing boot animation. For this you need adb and the developer options enabled.
-
-'''
 
 	#start an adb root shell. only the root user can access the /system partition
 	adb root
@@ -25,39 +22,35 @@ Before starting the custom animation, it is a good idea to back-up your existing
 	adb pull /system/media/bootanimation.zip
 	#make a backup file for easy restore.
 	mv bootanimation.zip bootanimation.zip.bak
-'''
 
 
 ## [The layout of the zipfile](#zipfile-layout)
 When you open the bootanimation.zip file, it includes:
 
-'''
 	desc.txt - a text file
 	part0  \
 	part1   \  directories full of PNG frames
 	...     /
 	partN  /
 
-'''
-
 
 ## [desc.txt format](#desc-format)
 
 The first line defines the general parameters of the animation:
-'''
+
+
 	WIDTH HEIGHT FPS
 	
 	    WIDTH: animation width (pixels)
 	    HEIGHT: animation height (pixels)
 	    FPS: frames per second, e.g. 60
-'''
 for example:
-'''
+
 	1080 1920 24
-'''
+
 
 The line above is followed by a number of rows of the form:
-'''
+
 	TYPE COUNT PAUSE PATH [FADE [#RGBHEX [CLOCK1 [CLOCK2]]]]
 	
 	    TYPE: a single char indicating what type of animation segment this is:
@@ -80,12 +73,11 @@ The line above is followed by a number of rows of the form:
 	                -24 or c -24 will position the text 24 pixels from the top of the screen, centred horizontally
 	                16 c will position the text 16 pixels from the left of the screen, centred vertically
 	                -32 32 will position the text such that the bottom right corner is 32 pixels above and 32 pixels left of the edges of the screen
-'''
 	
 For example:
-'''
+
 	p O 0 part0
-'''
+
 
 The first p will play the animation unless interupted by the boot
 the first count is set to zero to loop until boot is complete
