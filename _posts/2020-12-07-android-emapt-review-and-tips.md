@@ -3,8 +3,7 @@ layout: post
 title: eMAPT review and some tips
 ---
 
-A MASPT review including some other thoughts
-========================
+This post is meant to be somewhat of a MASPT review including some other thoughts.
 
 A discussion I had recently with a LinkedIn connection reminded me to write this review of the Mobile Application Security Pentetration Tester, leading to the eMAPTv1 certification. While it did not turn out as a review per say, I hope you still get some useful tidbits of information out of it. 
 
