@@ -9,7 +9,7 @@ As part of a fun sunday evening project, I created a custom android boot screen.
 /system/media/bootanimation.zip
 /oem/media/bootanimation.zip
 '''
-# [Creating a custom android boot animation](#custom-boot-animation)
+## [Creating a custom android boot animation](#custom-boot-animation)
 
 ## [warning](#warning)
 Before starting the custom animation, it is a good idea to back-up your existing boot animation. For this you need adb and the developer options enabled.
